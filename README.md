@@ -57,8 +57,8 @@ Please also be advised that every refresh of the data set (the main list) **will
 
 ![Key](images/keys.png)
 
-5. Click `Show` and copy the `Primary Key` of the keys to the app's `Setting`, where an input field requires you to enter an `Primary Key`. You may also copy the `Secondary Key` in but is is optional.
-6. Click `Save` on the top right, return to main page. Swipe down to refresh.
+5. Click `Show` and copy the `Primary Key` of the keys to the app's `Setting`, where an input field requires you to enter a `Primary Key`. You may also copy the `Secondary Key` in but it is optional.
+6. Click `Save` on the top right, and return to the main page. Swipe down to refresh.
 
 ### Ready to use
 
