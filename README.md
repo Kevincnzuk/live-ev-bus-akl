@@ -74,6 +74,6 @@ This project would not be possible without these open-source projects.
 
 ## License
 
-This project is distributed under `GNU AFFERO GENERAL PUBLIC LICENSE`.
+This project is distributed under `GNU GENERAL PUBLIC LICENSE`.
 
 Read more at [`LICENSE`](LICENSE).
