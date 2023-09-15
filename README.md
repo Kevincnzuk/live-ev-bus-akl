@@ -2,6 +2,12 @@
 
 This is the official distribution page for the `AKL Live EV Bus` app. Please take a look at the information below on how to use it.
 
+> **IMPORTANT MESSAGE**
+>
+> This app is a Java-based Android-only app. Apologies to iOS / iPadOS users as only Mac can do iOS / iPadOS developments but I do not have one with me.
+>
+> This app requires Android `8.0` (Oreo) or above to operate.
+
 We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/sustainability/mission-electric/).
 
 ## Features
