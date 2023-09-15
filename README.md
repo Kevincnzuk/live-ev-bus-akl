@@ -2,13 +2,15 @@
 
 This is the official distribution page for the `AKL Live EV Bus` app. Please take a look at the information below on how to use it.
 
+We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/sustainability/mission-electric/).
+
 > **IMPORTANT MESSAGE**
 >
 > This app is a Java-based Android-only app. Apologies to iOS / iPadOS users as only Mac can do iOS / iPadOS developments but I do not have one with me.
 >
 > This app requires Android `8.0` (Oreo) or above to operate.
-
-We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/sustainability/mission-electric/).
+>
+> This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
 
 ## Features
 
@@ -24,12 +26,6 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 ## Screenshots
 
 Will be available once the app becomes more complete...
-
----
-
-> Note:
->
-> This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
 
 ## Get started
 
