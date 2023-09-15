@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/item_main_list_bus_fleet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@android:string/unknownName"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                app:icon="@drawable/tag_black_24dp"
+                style="@style/Widget.Material3.Button.TextButton"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/item_main_list_bus_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@android:string/unknownName"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                app:icon="@drawable/pin_black_24dp"
+                style="@style/Widget.Material3.Button.TextButton"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/item_main_list_bus_route"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@android:string/unknownName"
+                app:icon="@drawable/route_black_24dp"
+                style="@style/Widget.Material3.Button.TextButton.Icon"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/item_main_list_bus_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:clickable="false"
+                android:text="@string/ev"
+                android:textAlignment="viewEnd"
+                app:icon="@drawable/bolt_black_24dp"
+                style="@style/Widget.Material3.Button.TextButton.Icon"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/item_main_list_bus_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/copy"
+                app:icon="@drawable/content_copy_black_24dp"
+                style="@style/Widget.Material3.Button.Icon"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/item_main_list_bus_full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/view_in_full"
+                app:icon="@drawable/open_in_new_black_24dp"
+                style="@style/Widget.Material3.Button.Icon"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

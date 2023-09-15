@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">AKL Live EV Bus</string>
+    <string name="refresh">Refresh</string>
+    <string name="map">Map</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search…</string>
+    <string name="development">Function under development.</string>
+
+    <string name="copy">Copy</string>
+    <string name="view_in_full">View full data</string>
+    <string name="ev">Electric</string>
+    <string name="fcv">Fuel Cell</string>
+    <string name="hev">Hybrid</string>
+
+    <string name="key">Ocp-Apim-Subscription-Key</string>
+    <string name="primary_key">Primary Key</string>
+    <string name="primary_key_helper">Mandatory</string>
+    <string name="secondary_key">Secondary Key</string>
+    <string name="secondary_key_helper">Optional</string>
+    <string name="save">Save</string>
+    <string name="where_to_get">Where can I get this?</string>
+
+    <string name="bus_info_bus_title">The Bus</string>
+    <string name="bus_info_model">Make: %1$s\nModel: %2$s\nYear: %3$s</string>
+    <string name="bus_info_json_title">Full JSON</string>
+</resources>
