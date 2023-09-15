@@ -46,7 +46,7 @@ public class SettingsActivity extends AppCompatActivity {
             Intent intent = new Intent();
             intent.setAction("android.intent.action.VIEW");
 
-            Uri content_url = Uri.parse("https://github.com/Kevincnzuk/akl-live-ev-bus#get-an-api-key");
+            Uri content_url = Uri.parse("https://github.com/Kevincnzuk/live-ev-bus-akl#get-an-api-key");
             intent.setData(content_url);
 
             startActivity(intent);

@@ -12,9 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.search.SearchBar;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -23,10 +21,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
 import okhttp3.OkHttpClient;
@@ -76,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             OkHttpClient client = new OkHttpClient();
 
             Request request = new Request.Builder()
-                    .url("https://raw.githubusercontent.com/Kevincnzuk/akl-live-ev-bus/main/datasets/akl_ev.json")
+                    .url("https://raw.githubusercontent.com/Kevincnzuk/live-ev-bus-akl/master/datasets/akl_ev.json")
                     .build();
 
             try {
@@ -161,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent();
                             intent.setAction("android.intent.action.VIEW");
 
-                            Uri content_url = Uri.parse("https://github.com/Kevincnzuk/akl-live-ev-bus/blob/main/no_datasets.md");
+                            Uri content_url = Uri.parse("https://github.com/Kevincnzuk/live-ev-bus-akl/blob/master/no_datasets.md");
                             intent.setData(content_url);
 
                             startActivity(intent);
