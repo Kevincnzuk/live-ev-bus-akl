@@ -31,7 +31,7 @@ This instruction will guide you through the preparation work before start using 
 
 ### Download and install
 
-Go to the [Release](https://github.com/Kevincnzuk/akl-live-ev-bus-datasets/releases) page and seek the green "Latest" tag, and download the relevant `.apk` file.
+Go to the [Release](releases) page and seek the green "Latest" tag, and download the relevant `.apk` file.
 
 Follow the instructions from your device to install it.
 
