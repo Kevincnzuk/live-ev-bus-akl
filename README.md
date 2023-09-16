@@ -4,13 +4,12 @@ This is the official distribution page for the `AKL Live EV Bus` app. Please tak
 
 We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/sustainability/mission-electric/).
 
-> **IMPORTANT MESSAGE**
->
-> This app is a Java-based Android-only app. Apologies to iOS / iPadOS users as only Mac can do iOS / iPadOS developments but I do not have one with me.
->
-> This app requires Android `8.0` (Oreo) or above to operate.
->
-> This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
+## Important Message & Disclaimer
+
+- This app is a Java-based Android-only app. Apologies to iOS / iPadOS users as only Mac can do iOS / iPadOS developments but I do not have one with me.
+- This app requires Android `8.0` (Oreo) or above to operate.
+- This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
+- All real-time data presented in the app came from [Auckland Transport](https://at.govt.nz/about-us/at-data-sources); All map data came from [OpenStreetMap](https://www.openstreetmap.org/copyright); This repository has zero liability for incorrect data presentation.
 
 ## Features
 
@@ -25,7 +24,7 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 
 ## Screenshots
 
-Will be available once the app becomes more complete...
+_Will be available once the app becomes more complete..._
 
 ## Get started
 
@@ -64,7 +63,7 @@ You are ready to go!
 
 - [Data source currently unavailable.](no_datasets.md)
 
-## Open-source project
+## Open-source Projects Used
 
 This project would not be possible without these open-source projects.
 
@@ -76,6 +75,6 @@ This project would not be possible without these open-source projects.
 
 ## License
 
-This project is distributed under `GNU GENERAL PUBLIC LICENSE`.
+This project is licensed under the `GNU General Public License v3.0`.
 
 Read more at [`LICENSE`](LICENSE).
