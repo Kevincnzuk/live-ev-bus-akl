@@ -6,7 +6,7 @@ This could result from multiple reasons, some possibilities are listed below.
 2. You have no internet connection - Unlikely if you can still see this text. You could [do a speed test](https://www.chorus.co.nz/speed-test).
 3. Auckland Transport's API is down - Check if you can access [https://dev-portal.at.govt.nz/](https://dev-portal.at.govt.nz/) and send a request. [How to send a request using a browser?](#how-to-send-a-request-using-a-browser)
 4. You have entered the wrong key - Check if the keys you have entered in `Settings` are the same as it is shown in your [account](https://dev-portal.at.govt.nz/signin).
-5. Other reasons - Pull a [issue](https://github.com/Kevincnzuk/akl-live-ev-bus/issues) here on GitHub and I will have a look. Attach as much information as you possibly can.
+5. Other reasons - Pull a [issue](https://github.com/Kevincnzuk/live-ev-bus-akl/issues) here on GitHub and I will have a look. Attach as much information as you possibly can.
 
 ## How to send a request using a browser?
 
