@@ -13,14 +13,18 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 
 ## Features
 
-- [x] A list to show all electric & new energy buses operating currently.
+- [x] A list showing all current electric & new energy buses.
 - [x] A map visually presenting all electric & new energy buses operating currently.
 - [x] A neat Material 3 UI & Dark mode adapted.
 - [ ] Detail page showing all about this bus.
-- [ ] Bus search.
-- [ ] Photo library for bus (in terms of model and/or fleet no.)
+- [ ] _Bus search._
+- [ ] _Photo library for bus (in terms of model and/or fleet no.)_
 - [ ] _Data structure changed from `JSON` to `SQL` (TBA)_
 - [ ] _Connection to AnyTrip (TBA depends on availability)_
+
+> We are running into problems with some features due to a lack of information.
+>
+> A `SQL` hosted via this GitHub repository is quite hard to do for now but we are looking for solutions, meanwhile the core functions (the one already ticked) will remain functional as long as AT have their API unchanged.
 
 ## Screenshots
 
