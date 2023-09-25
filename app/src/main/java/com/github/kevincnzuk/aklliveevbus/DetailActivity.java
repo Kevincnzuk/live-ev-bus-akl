@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.carousel.CarouselLayoutManager;
@@ -27,6 +29,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private MaterialToolbar toolbar;
     private RecyclerView rvBusImages;
+    private WebView wvFleetLists;
     private MaterialTextView tvFullJson;
 
     private VehicleVO vehicleVO;
@@ -43,6 +46,7 @@ public class DetailActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.detail_toolbar);
         rvBusImages = findViewById(R.id.detail_bus_images);
+        wvFleetLists = findViewById(R.id.detail_web_view);
         tvFullJson = findViewById(R.id.detail_full_json);
 
         toolbar.setTitle(vehicleVO.getLabel());
@@ -54,6 +58,7 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         initBusImages();
+        initWebView(vehicleVO.getLicensePlate());
         tvFullJson.setText(json);
     }
 
@@ -68,6 +73,16 @@ public class DetailActivity extends AppCompatActivity {
         rvBusImages.setLayoutManager(manager);
         ImageAdapter adapter = new ImageAdapter(list);
         rvBusImages.setAdapter(adapter);
+    }
+
+    private void initWebView(String licensePlate) {
+        wvFleetLists.getSettings().setJavaScriptEnabled(true);
+        wvFleetLists.getSettings().setBuiltInZoomControls(true);
+        wvFleetLists.getSettings().setUseWideViewPort(true);
+        wvFleetLists.getSettings().setSupportZoom(true);
+        wvFleetLists.setWebViewClient(new WebViewClient());
+        wvFleetLists.setInitialScale(1);
+        wvFleetLists.loadUrl("https://fleetlists.busaustralia.com/indbusdata.php?nz=ON&requesttype=rego&reqtype=" + licensePlate);
     }
 
     private VehicleVO phaseJsonFromUpper(String json) {

@@ -22,5 +22,6 @@
 
     <string name="bus_info_bus_title">The Bus</string>
     <string name="bus_info_model">Make: %1$s\nModel: %2$s\nYear: %3$s</string>
+    <string name="bus_info_web">Australian Bus Fleet Lists</string>
     <string name="bus_info_json_title">Full JSON</string>
 </resources>
