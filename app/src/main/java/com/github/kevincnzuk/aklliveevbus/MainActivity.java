@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.search.SearchBar;
 import com.google.android.material.snackbar.Snackbar;
@@ -163,16 +164,30 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
                         }).show();
             }
-            LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
-            recyclerView.setLayoutManager(manager);
-            BusAdapter adapter = new BusAdapter(this, list, busVOList);
-            recyclerView.setAdapter(adapter);
+            if (list.size() > 0) {
+                LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
+                recyclerView.setLayoutManager(manager);
+                BusAdapter adapter = new BusAdapter(this, list, busVOList);
+                recyclerView.setAdapter(adapter);
 
-            vehicleVOList = list;
+                vehicleVOList = list;
 
-            Snackbar.make(swipeRefreshLayout, "Realtime has been updated.", Snackbar.LENGTH_LONG).show();
-            //toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date(Math.round(timestamp * 1000)))));
-            swipeRefreshLayout.setRefreshing(false);
+                Snackbar.make(swipeRefreshLayout, "Realtime has been updated.", Snackbar.LENGTH_LONG).show();
+                //toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date(Math.round(timestamp * 1000)))));
+                swipeRefreshLayout.setRefreshing(false);
+            } else {
+                Snackbar make = Snackbar.make(swipeRefreshLayout, "Hmm, seems like no bus is running.", Snackbar.LENGTH_LONG);
+                make.setAction("Why?", v -> {
+                    Intent intent = new Intent();
+                    intent.setAction("android.intent.action.VIEW");
+
+                    Uri content_url = Uri.parse("https://github.com/Kevincnzuk/live-ev-bus-akl/blob/master/no_datasets.md");
+                    intent.setData(content_url);
+
+                    startActivity(intent);
+                });
+                make.show();
+            }
         });
     }
 
