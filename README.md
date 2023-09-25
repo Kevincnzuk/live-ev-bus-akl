@@ -4,26 +4,31 @@ This is the official distribution page for the `AKL Live EV Bus` app. Please tak
 
 We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/sustainability/mission-electric/).
 
+## Important Message & Disclaimer
+
+- This app is a Java-based Android-only app. Apologies to iOS / iPadOS users as only Mac can do iOS / iPadOS developments but I do not have one with me.
+- This app requires Android `8.0` (Oreo) or above to operate.
+- This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
+- All real-time data presented in the app came from [Auckland Transport](https://at.govt.nz/about-us/at-data-sources); All map data came from [OpenStreetMap](https://www.openstreetmap.org/copyright); This repository has zero liability for incorrect data presentation.
+
 ## Features
 
-- [x] A list to show all electric & new energy buses operating currently.
+- [x] A list showing all current electric & new energy buses.
 - [x] A map visually presenting all electric & new energy buses operating currently.
 - [x] A neat Material 3 UI & Dark mode adapted.
 - [ ] Detail page showing all about this bus.
-- [ ] Bus search.
-- [ ] Photo library for bus (in terms of model and/or fleet no.)
+- [ ] _Bus search._
+- [ ] _Photo library for bus (in terms of model and/or fleet no.)_
 - [ ] _Data structure changed from `JSON` to `SQL` (TBA)_
 - [ ] _Connection to AnyTrip (TBA depends on availability)_
 
+> We are running into problems with some features due to a lack of information.
+>
+> A `SQL` hosted via this GitHub repository is quite hard to do for now but we are looking for solutions, meanwhile the core functions (the one already ticked) will remain functional as long as AT have their API unchanged.
+
 ## Screenshots
 
-Will be available once the app becomes more complete...
-
----
-
-> Note:
->
-> This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
+_Will be available once the app becomes more complete..._
 
 ## Get started
 
@@ -31,7 +36,7 @@ This instruction will guide you through the preparation work before start using 
 
 ### Download and install
 
-Go to the [Release](https://github.com/Kevincnzuk/akl-live-ev-bus-datasets/releases) page and seek the green "Latest" tag, and download the relevant `.apk` file.
+Go to the [Release](https://github.com/Kevincnzuk/live-ev-bus-akl/releases) page and seek the green "Latest" tag, and download the relevant `.apk` file.
 
 Follow the instructions from your device to install it.
 
@@ -51,8 +56,8 @@ Please also be advised that every refresh of the data set (the main list) **will
 
 ![Key](images/keys.png)
 
-5. Click `Show` and copy the `Primary Key` of the keys to the app's `Setting`, where an input field requires you to enter an `Primary Key`. You may also copy the `Secondary Key` in but is is optional.
-6. Click `Save` on the top right, return to main page. Swipe down to refresh.
+4. Click `Show` and copy the `Primary Key` of the keys to the app's `Setting`, where an input field requires you to enter a `Primary Key`. You may also copy the `Secondary Key` in but it is optional.
+5. Click `Save` on the top right, and return to the main page. Swipe down to refresh.
 
 ### Ready to use
 
@@ -62,7 +67,7 @@ You are ready to go!
 
 - [Data source currently unavailable.](no_datasets.md)
 
-## Open-source project
+## Open-source Projects Used
 
 This project would not be possible without these open-source projects.
 
@@ -74,6 +79,6 @@ This project would not be possible without these open-source projects.
 
 ## License
 
-This project is distributed under `GNU AFFERO GENERAL PUBLIC LICENSE`.
+This project is licensed under the `GNU General Public License v3.0`.
 
 Read more at [`LICENSE`](LICENSE).
