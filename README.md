@@ -71,11 +71,14 @@ You are ready to go!
 
 This project would not be possible without these open-source projects.
 
-- [Material Design](https://m3.material.io/) by Google
-- [OkHttp](https://github.com/square/okhttp) by Square
-- [Picasso](https://github.com/square/picasso) by Square
-- [osmdroid](https://github.com/osmdroid/osmdroid) by osmdroid
-- [PermissionX](https://github.com/guolindev/PermissionX) by Lin Guo
+- [AT Data Sources](https://at.govt.nz/about-us/at-data-sources) by _Auckland Transport_ (Public Domain CC `4.0`)
+- [Material Design](https://m3.material.io/) by _Google_
+- [Material Icons](https://github.com/google/material-design-icons) by _Google_
+- [Material Icons Extended](https://github.com/IgniteUI/material-icons-extended) by _Infragistics_
+- [OkHttp](https://github.com/square/okhttp) by _Square_
+- [Picasso](https://github.com/square/picasso) by _Square_
+- [osmdroid](https://github.com/osmdroid/osmdroid) by _osmdroid_
+- [PermissionX](https://github.com/guolindev/PermissionX) by _Lin Guo_
 
 ## License
 
