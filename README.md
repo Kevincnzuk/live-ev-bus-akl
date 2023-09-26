@@ -73,11 +73,15 @@ You are ready to go!
 - [Data source currently unavailable.](no_datasets.md)
 - [Hmm, seems like no bus is running.](no_bus_running.md)
 
+### Known issues
+
+- [ ] If the main list is empty (regardless of not initialised or no bus is running), using the map function will cause the app to crash with `java.lang.NullPointerException`. 
+
 ## Open-source Projects Used
 
 This project would not be possible without these open-source projects.
 
-- [AT Data Sources](https://at.govt.nz/about-us/at-data-sources) by _Auckland Transport_ (Public Domain CC `4.0`)
+- [AT Data Sources](https://at.govt.nz/about-us/at-data-sources) by _Auckland Transport_ (Public Domain CC 4.0)
 - [Material Design](https://m3.material.io/) by _Google_
 - [Material Icons](https://github.com/google/material-design-icons) by _Google_
 - [Material Icons Extended](https://github.com/IgniteUI/material-icons-extended) by _Infragistics_
