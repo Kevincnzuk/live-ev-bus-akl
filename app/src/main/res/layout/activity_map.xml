@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="@string/map"
-            app:subtitle="@string/map"
+            app:subtitle="@string/last_updated"
             app:subtitleTextAppearance="@style/TextAppearance.Material3.BodyMedium"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -55,10 +55,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="16dp"/>
 
-            <com.google.android.material.switchmaterial.SwitchMaterial
+            <com.google.android.material.materialswitch.MaterialSwitch
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/map_auto_refresh_5"
+                android:text="@string/map_auto_refresh"
                 android:enabled="false"/>
 
             <Space

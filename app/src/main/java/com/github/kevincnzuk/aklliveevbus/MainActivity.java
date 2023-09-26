@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.search.SearchBar;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -22,8 +23,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import okhttp3.OkHttpClient;
@@ -34,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    private SearchBar searchBar;
+    //private SearchBar searchBar;
+    private MaterialToolbar toolbar;
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView recyclerView;
 
@@ -46,11 +50,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        searchBar = findViewById(R.id.main_search_bar);
+        //searchBar = findViewById(R.id.main_search_bar);
+        toolbar = findViewById(R.id.main_toolbar);
         swipeRefreshLayout = findViewById(R.id.main_swipe_refresh_layout);
         recyclerView = findViewById(R.id.main_recycler_view);
 
-        setSupportActionBar(searchBar);
+        //setSupportActionBar(searchBar);
+        setSupportActionBar(toolbar);
 
         swipeRefreshLayout.setOnRefreshListener(this::getDataFromPortalOkHttp);
 
@@ -173,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 vehicleVOList = list;
 
                 Snackbar.make(swipeRefreshLayout, "Realtime has been updated.", Snackbar.LENGTH_LONG).show();
-                //toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date(Math.round(timestamp * 1000)))));
+                toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date(Math.round(timestamp * 1000)))));
                 swipeRefreshLayout.setRefreshing(false);
             } else {
                 Snackbar make = Snackbar.make(swipeRefreshLayout, "Hmm, seems like no bus is running.", Snackbar.LENGTH_LONG);

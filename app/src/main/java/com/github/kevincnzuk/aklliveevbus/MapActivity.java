@@ -67,7 +67,8 @@ public class MapActivity extends AppCompatActivity {
         flBottomSheet = findViewById(R.id.map_bottom_sheet);
         tvMapContributors = findViewById(R.id.map_map_tv_contributor);
 
-        toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date(Math.round(timestamp * 1000)))));
+        toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+                .format(new Date(Math.round(timestamp * 1000)))));
         setSupportActionBar(toolbar);
         ActionBar bar = getSupportActionBar();
         if (bar != null) {
