@@ -63,9 +63,15 @@ Please also be advised that every refresh of the data set (the main list) **will
 
 You are ready to go!
 
+## Provide Feedback
+
+- [New function recommendation](https://github.com/Kevincnzuk/live-ev-bus-akl/discussions/categories/ideas)
+- [Issues with the app](https://github.com/Kevincnzuk/live-ev-bus-akl/issues)
+
 ## Troubleshooting
 
 - [Data source currently unavailable.](no_datasets.md)
+- [Hmm, seems like no bus is running.](no_bus_running.md)
 
 ## Open-source Projects Used
 
