@@ -72,6 +72,7 @@ You are ready to go!
 This project would not be possible without these open-source projects.
 
 - [Material Design](https://m3.material.io/) by Google
+- [Material Icons Extended](https://github.com/IgniteUI/material-icons-extended) by Infragistics
 - [OkHttp](https://github.com/square/okhttp) by Square
 - [Picasso](https://github.com/square/picasso) by Square
 - [osmdroid](https://github.com/osmdroid/osmdroid) by osmdroid
