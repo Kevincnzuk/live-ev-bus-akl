@@ -71,7 +71,7 @@ You are ready to go!
 
 This project would not be possible without these open-source projects.
 
-- [AT Data Sources](https://at.govt.nz/about-us/at-data-sources) by _Auckland Transport_
+- [AT Data Sources](https://at.govt.nz/about-us/at-data-sources) by _Auckland Transport_ (Public Domain CC `4.0`)
 - [Material Design](https://m3.material.io/) by _Google_
 - [Material Icons](https://github.com/google/material-design-icons) by _Google_
 - [Material Icons Extended](https://github.com/IgniteUI/material-icons-extended) by _Infragistics_
