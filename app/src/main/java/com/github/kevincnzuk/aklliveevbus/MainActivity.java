@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent();
                     intent.setAction("android.intent.action.VIEW");
 
-                    Uri content_url = Uri.parse("https://github.com/Kevincnzuk/live-ev-bus-akl/blob/master/no_datasets.md");
+                    Uri content_url = Uri.parse("https://github.com/Kevincnzuk/live-ev-bus-akl/blob/master/no_bus_running.md");
                     intent.setData(content_url);
 
                     startActivity(intent);
