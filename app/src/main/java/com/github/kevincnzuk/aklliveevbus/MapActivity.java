@@ -8,21 +8,22 @@ import android.Manifest;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.PathEffect;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.textview.MaterialTextView;
 import com.permissionx.guolindev.PermissionX;
 
 import org.osmdroid.api.IGeoPoint;
 import org.osmdroid.api.IMapController;
 import org.osmdroid.config.Configuration;
-import org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
@@ -33,10 +34,8 @@ import org.osmdroid.views.overlay.simplefastpoint.SimpleFastPointOverlay;
 import org.osmdroid.views.overlay.simplefastpoint.SimpleFastPointOverlayOptions;
 import org.osmdroid.views.overlay.simplefastpoint.SimplePointTheme;
 
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -46,6 +45,8 @@ public class MapActivity extends AppCompatActivity {
 
     private MaterialToolbar toolbar;
     private MapView mapView;
+    private FrameLayout flBottomSheet;
+    private MaterialTextView tvMapContributors;
 
     private double timestamp;
     private List<VehicleVO> vehicleVOList;
@@ -63,6 +64,8 @@ public class MapActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.map_toolbar);
         mapView = findViewById(R.id.map_osm_map);
+        flBottomSheet = findViewById(R.id.map_bottom_sheet);
+        tvMapContributors = findViewById(R.id.map_map_tv_contributor);
 
         toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date(Math.round(timestamp * 1000)))));
         setSupportActionBar(toolbar);
@@ -71,17 +74,25 @@ public class MapActivity extends AppCompatActivity {
             bar.setDisplayHomeAsUpEnabled(true);
         }
 
-        Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
+        Configuration.getInstance().load(this, SPHelper.getInstance(this).getPref());
         mapView.setTileSource(TileSourceFactory.MAPNIK);
         mapView.setMultiTouchControls(true);
+        mapView.setBuiltInZoomControls(false);
 
         IMapController mapController = mapView.getController();
-        mapController.setZoom(16);
+        mapController.setZoom(16.0);
         mapController.setCenter(new GeoPoint(-36.8484, 174.7621));
 
         initPermissionX();
 
         initMapOverlays(vehicleVOList);
+
+        BottomSheetBehavior behavior = BottomSheetBehavior.from(flBottomSheet);;
+        behavior.setPeekHeight(194);
+        behavior.setHideable(false);
+
+        // Reference to https://stackoverflow.com/questions/2734270/how-to-make-links-in-a-textview-clickable
+        tvMapContributors.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     private void initPermissionX() {

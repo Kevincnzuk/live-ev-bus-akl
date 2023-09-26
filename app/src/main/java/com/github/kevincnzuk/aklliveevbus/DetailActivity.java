@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -19,6 +22,12 @@ import com.google.android.material.textview.MaterialTextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.osmdroid.api.IMapController;
+import org.osmdroid.config.Configuration;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.Marker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +38,8 @@ public class DetailActivity extends AppCompatActivity {
 
     private MaterialToolbar toolbar;
     private RecyclerView rvBusImages;
+    private MaterialTextView tvMapContributors;
+    private MapView mapView;
     private WebView wvFleetLists;
     private MaterialTextView tvFullJson;
 
@@ -46,6 +57,8 @@ public class DetailActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.detail_toolbar);
         rvBusImages = findViewById(R.id.detail_bus_images);
+        tvMapContributors = findViewById(R.id.detail_map_tv_contributor);
+        mapView = findViewById(R.id.detail_map_view);
         wvFleetLists = findViewById(R.id.detail_web_view);
         tvFullJson = findViewById(R.id.detail_full_json);
 
@@ -57,9 +70,38 @@ public class DetailActivity extends AppCompatActivity {
             bar.setDisplayHomeAsUpEnabled(true);
         }
 
+        tvMapContributors.setMovementMethod(LinkMovementMethod.getInstance());
+
         initBusImages();
         initWebView(vehicleVO.getLicensePlate());
         tvFullJson.setText(json);
+
+        // Initialize MapView data
+        Configuration.getInstance().load(this, SPHelper.getInstance(this).getPref());
+        mapView.setTileSource(TileSourceFactory.MAPNIK);
+        mapView.setMultiTouchControls(true);
+
+        GeoPoint position = new GeoPoint(-36.8484, 174.7621);
+
+        try {
+            JSONObject object = new JSONObject(json)
+                    .getJSONObject("vehicle")
+                    .getJSONObject("position");
+            position.setLatitude(object.getDouble("latitude"));
+            position.setLongitude(object.getDouble("longitude"));
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
+        IMapController mapController = mapView.getController();
+        mapController.setZoom(19.0);
+        mapController.setCenter(position);
+
+        Marker marker = new Marker(mapView);
+        marker.setPosition(position);
+        marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER);
+        marker.setIcon(getResources().getDrawable(R.drawable.directions_bus_black_24dp, getTheme()));
+        mapView.getOverlays().add(marker);
     }
 
     private void initBusImages() {

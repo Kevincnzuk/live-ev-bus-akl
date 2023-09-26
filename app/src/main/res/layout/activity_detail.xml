@@ -80,20 +80,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/bus_info_map_title"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/detail_map_tv_contributor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/map_contribution"
+                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>
+
+                    </LinearLayout>
+
+                    <org.osmdroid.views.MapView
+                        android:id="@+id/detail_map_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="256dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
                         android:text="@string/bus_info_web"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
 
                     <WebView
                         android:id="@+id/detail_web_view"
                         android:layout_width="match_parent"
-                        android:layout_height="256dp"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_height="256dp"/>
 
                 </LinearLayout>
 

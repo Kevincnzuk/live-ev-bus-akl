@@ -21,6 +21,10 @@ public class SPHelper {
     private void SharedPreferencesHelper() {
     }
 
+    public SharedPreferences getPref() {
+        return pref;
+    }
+
     public static SPHelper getInstance(Context context){
         if (sharedPreferencesHelper == null){
             sharedPreferencesHelper = new SPHelper();

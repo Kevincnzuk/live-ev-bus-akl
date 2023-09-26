@@ -22,6 +22,11 @@
 
     <string name="bus_info_bus_title">The Bus</string>
     <string name="bus_info_model">Make: %1$s\nModel: %2$s\nYear: %3$s</string>
+    <string name="bus_info_map_title">Location</string>
     <string name="bus_info_web">Australian Bus Fleet Lists</string>
     <string name="bus_info_json_title">Full JSON</string>
+
+    <string name="map_settings">Map Settings</string>
+    <string name="map_auto_refresh_5">Refresh every 5 minutes</string>
+    <string name="map_contribution">© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</string>
 </resources>
