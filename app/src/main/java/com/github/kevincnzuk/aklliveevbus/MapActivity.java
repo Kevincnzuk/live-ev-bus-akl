@@ -27,6 +27,8 @@ import org.osmdroid.config.Configuration;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.ItemizedIconOverlay;
+import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider;
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
 import org.osmdroid.views.overlay.simplefastpoint.LabelledGeoPoint;
@@ -131,6 +133,7 @@ public class MapActivity extends AppCompatActivity {
         text.setColor(Color.parseColor("#2c384c"));
         text.setTextAlign(Paint.Align.LEFT);
         text.setTextSize(64);
+        text.setAntiAlias(true);
 
         Paint point = new Paint();
         point.setStyle(Paint.Style.FILL);
@@ -140,13 +143,24 @@ public class MapActivity extends AppCompatActivity {
 
         SimpleFastPointOverlayOptions options = SimpleFastPointOverlayOptions.getDefaultStyle()
                 .setAlgorithm(SimpleFastPointOverlayOptions.RenderingAlgorithm.MAXIMUM_OPTIMIZATION)
-                .setRadius(24).setCellSize(16).setTextStyle(text).setPointStyle(point);
-
-        // TODO: 实现点击车辆进入详情页：https://github.com/osmdroid/osmdroid/wiki/Markers,-Lines-and-Polygons-(Java)
+                .setRadius(24)
+                .setCellSize(16)
+                .setTextStyle(text)
+                .setPointStyle(point)
+                .setIsClickable(true);
 
         SimpleFastPointOverlay overlay = new SimpleFastPointOverlay(theme, options);
 
+        overlay.setOnClickListener((points1, point1) -> {
+            Intent intent = new Intent(MapActivity.this, DetailActivity.class);
+            intent.putExtra("json", list.get(point1).getFullJson());
+            startActivity(intent);
+        });
+
         mapView.getOverlays().add(overlay);
+
+        // 实现点击车辆进入详情页：https://github.com/osmdroid/osmdroid/wiki/Markers,-Lines-and-Polygons-(Java)
+
     }
 
     @Override
