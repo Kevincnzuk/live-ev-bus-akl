@@ -74,7 +74,9 @@ You are ready to go!
 
 ### Known issues
 
-- [ ] If the main list is empty (regardless of not initialised or no bus is running), using the map function will cause the app to crash with `java.lang.NullPointerException`. 
+- [ ] If the main list is empty (regardless of not initialised or no bus is running), using the map function will cause the app to crash with `java.lang.NullPointerException`.
+- [ ] GoBus AirportLink Yutong E12 buses have no rego displaying -- This is an AT problem, they did not provide it in the API, and we only display things in the API or the `datasets` folder from this repository.
+- [ ] If the "Route" is displaying a 5 digits number, it is also an AT problem for returning the old v2 API that they have been deprecated for over half a year, while this app is based on the newest v3 API.
 
 ## Open-source Projects Used
 
