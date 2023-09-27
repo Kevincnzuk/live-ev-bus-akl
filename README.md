@@ -22,9 +22,9 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 - [ ] _Data structure changed from `JSON` to `SQL` (TBA)_
 - [ ] _Connection to AnyTrip (TBA depends on availability)_
 
-> We are running into problems with some features due to a lack of information.
+> We are facing problems with some features due to a lack of information.
 >
-> A `SQL` hosted via this GitHub repository is quite hard to do for now but we are looking for solutions, meanwhile the core functions (the one already ticked) will remain functional as long as AT have their API unchanged.
+> A `SQL` hosted via this GitHub repository is quite hard to do for now but we are looking for solutions, meanwhile, the core functions (the one already ticked) will remain functional as long as AT have their API unchanged.
 
 ## Screenshots
 
@@ -34,9 +34,8 @@ _Will be available once the app becomes more complete..._
 
 This instruction will guide you through the preparation work before start using the app itself.
 
-### Download and install
-
-Go to the [Release](https://github.com/Kevincnzuk/live-ev-bus-akl/releases) page and seek the green "Latest" tag, and download the relevant `.apk` file.
+### Download and install`
+Go to the [Release](https://github.com/Kevincnzuk/live-ev-bus-akl/releases) page and seek the green `Latest` tag (or the latest `Pre-Release` tag) and download the relevant `.apk` file.
 
 Follow the instructions from your device to install it.
 
