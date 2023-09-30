@@ -95,4 +95,4 @@ This project would not be possible without these open-source projects.
 
 This project is licensed under the `GNU General Public License v3.0`.
 
-Read more at [`LICENSE`](LICENSE).
+Read more at [`LICENSE.md`](LICENSE.md).
