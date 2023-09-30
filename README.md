@@ -93,6 +93,6 @@ This project would not be possible without these open-source projects.
 
 ## License
 
-This project is licensed under the [`GNU General Public License v3.0`](https://www.gnu.org/licenses/gpl-3.0.html). [![GNU GPL v3.0 logo](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](https://www.gnu.org/licenses/gpl-3.0.html)
+This project is licensed under the `GNU General Public License v3.0`. [![GNU GPL v3.0 logo](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](https://www.gnu.org/graphics/license-logos.html)
 
 Read more at [`LICENSE.md`](LICENSE.md).
