@@ -6,9 +6,6 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 
 ## Important Message & Disclaimer
 
-> [!IMPORTANT]
-> Crucial information necessary for users to succeed.
-
 - This app is a Java-based Android-only app. Apologies to iOS / iPadOS users as only Mac can do iOS / iPadOS developments but I do not have one with me.
 - This app requires Android `8.0` (Oreo) or above to operate.
 - This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
@@ -25,9 +22,8 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 - [ ] _Data structure changed from `JSON` to `SQL` (TBA)_
 - [ ] _Connection to AnyTrip (TBA depends on availability)_
 
-> We are facing problems with some features due to a lack of information.
->
-> A `SQL` hosted via this GitHub repository is quite hard to do for now but we are looking for solutions, meanwhile, the core functions (the one already ticked) will remain functional as long as AT have their API unchanged.
+> [!NOTE]
+> We are facing problems due to the "zero server" target and the lack of resources available to be used.
 
 ## Screenshots
 
@@ -79,7 +75,7 @@ You are ready to go!
 
 - [ ] If the main list is empty (regardless of not initialised or no bus is running), using the map function will cause the app to crash with `java.lang.NullPointerException`.
 - [ ] Go Bus AirportLink Yutong E12 buses have no rego displaying -- This is an AT problem, they did not provide it in the API, and we only display things in the API or from the `datasets` folder of this repository.
-- [ ] If the `Route` is displaying a 5 digits number, it is also an AT problem for returning the old v2 API that they have been deprecated for over half a year, while this app is based on the newest v3 API.
+- [ ] If the `Route` is displaying a 5-digit number, it is also an AT problem for returning the old v2 API that has been deprecated for over half a year, while this app is based on the newest v3 API.
 
 ## Open-source Projects Used
 
