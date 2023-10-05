@@ -23,7 +23,7 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 - [ ] _Connection to AnyTrip (TBA depends on availability)_
 
 > [!NOTE]
-> We are facing problems due to the "zero server" target and the lack of resources available to be used.
+> We are facing problems due to the "zero server" target and the lack of resources available to be used, update progress may be slow.
 
 ## Screenshots
 
