@@ -75,7 +75,7 @@ You are ready to go!
 - [ ] If the main list is empty (regardless of not initialised or no bus is running), using the map function will cause the app to crash with `java.lang.NullPointerException`.
 - [ ] Go Bus AirportLink Yutong E12 buses have no rego displaying -- This is an AT problem, they did not provide it in the API, and we only display things in the API or from the `datasets` folder of this repository.
 - [ ] If the `Route` is displaying a 5-digit number, it is also an AT problem for returning the old v2 API that has been deprecated for over half a year, while this app is based on the newest v3 API.
-- [ ] `HE0601` is designed to have dedicated hydrogen label, but is still displaying `Electric` in the list.
+- [ ] `HE0601` is designed to have a dedicated hydrogen label, but is still displaying `Electric` in the list.
 
 ## Open-source Projects Used
 
@@ -95,3 +95,9 @@ This project would not be possible without these open-source projects.
 This project is licensed under the `GNU General Public License v3.0`. [![GNU GPL v3.0 logo](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](https://www.gnu.org/graphics/license-logos.html)
 
 Read more at [`LICENSE.md`](LICENSE.md).
+
+## Can I download a copy of the source code and develop one for my city?
+
+Yes, and that is one of the purposes I open-source it. Programming is a tool with unlimited imagination, we should get to use the most from it.
+
+However, do pay attention to the conditions in the GPL-3.0 license, you need to follow them if you use copies of my code.
