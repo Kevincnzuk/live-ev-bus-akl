@@ -20,14 +20,14 @@ A general guide on future maintenance of this repository and the service it prov
    
    Where `id` should be a 5-digit number which you can find using AnyTrip. `fleet` should always have a length of 6, if 5 (eg `HE505`) then add a `0` after letters (`HE0505`). Energy should be either `ev` for electric vehicle, `fcv` for fuel cell vehicle, or `hev` for hybrid electric vehicle.
    
-   The file should then look like this:
+   The file should then look something similar to this:
    
    ```json
    [
        {"id": "10305","fleet": "NB0305","energy": "ev"},
-       // ...
-       {"id": "Old Bus","fleet": "Old Bus","energy": "Old bus"},
-       {"id": "New Bus","fleet": "New Bus","energy": "New bus"}
+       {"id": "Lots","fleet": "Of","energy": "Entries"},
+       {"id": "12345","fleet": "AB2345","energy": "ev"},
+       {"id": "12346","fleet": "AB2346","energy": "ev"}
    ]
    ```
    
@@ -37,10 +37,4 @@ A general guide on future maintenance of this repository and the service it prov
 
 ## Want to help maintain the code?
 
-Email me at kchang753@outlook.com so I can add you to the contributor list.
-
-## Can I download a copy of the source code and develop one for my city?
-
-Yes, and that is one of the purposes I open-source it. Programming is a tool with unlimited imagination, we should get to use the most from it.
-
-However, do pay attention to the conditions in GPL-3.0 license, you need to follow them if you uses copies of my code.
+Email me at `kchang753@outlook.com` so I can add you to the contributor list.
