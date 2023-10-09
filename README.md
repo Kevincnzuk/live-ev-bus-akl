@@ -4,12 +4,11 @@ This is the official distribution page for the `AKL Live EV Bus` app. Please tak
 
 We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/sustainability/mission-electric/).
 
-## Important Message & Disclaimer
-
-- This app is a Java-based Android-only app. Apologies to iOS / iPadOS users as only Mac can do iOS / iPadOS developments but I do not have one with me.
-- This app requires Android `8.0` (Oreo) or above to operate.
-- This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
-- All real-time data presented in the app came from [Auckland Transport](https://at.govt.nz/about-us/at-data-sources); All map data came from [OpenStreetMap](https://www.openstreetmap.org/copyright); This repository has zero liability for incorrect data presentation.
+> [!IMPORTANT]
+> - This app is a Java-based Android-only app. Apologies to iOS / iPadOS users as only Mac can do iOS / iPadOS developments but I do not have one with me.
+> - This app requires Android `8.0` (Oreo) or above to operate.
+> - This app is **NOT** a replacement for well-structured PT realtime apps like *AT Mobile*, *Google Maps*, *AnyTrip* or *Transit*. As an enthusiastic project, we have very limited resources available compared to these big companies and cannot offer auto-refresh functions in-app.
+> - All real-time data presented in the app came from [Auckland Transport](https://at.govt.nz/about-us/at-data-sources); All map data came from [OpenStreetMap](https://www.openstreetmap.org/copyright); This repository has zero liability for incorrect data presentation.
 
 ## Features
 
@@ -22,9 +21,8 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 - [ ] _Data structure changed from `JSON` to `SQL` (TBA)_
 - [ ] _Connection to AnyTrip (TBA depends on availability)_
 
-> We are running into problems with some features due to a lack of information.
->
-> A `SQL` hosted via this GitHub repository is quite hard to do for now but we are looking for solutions, meanwhile the core functions (the one already ticked) will remain functional as long as AT have their API unchanged.
+> [!NOTE]
+> We are facing problems due to the "zero server" target and the lack of resources available to be used, update progress may be slow.
 
 ## Screenshots
 
@@ -35,8 +33,7 @@ _Will be available once the app becomes more complete..._
 This instruction will guide you through the preparation work before start using the app itself.
 
 ### Download and install
-
-Go to the [Release](https://github.com/Kevincnzuk/live-ev-bus-akl/releases) page and seek the green "Latest" tag, and download the relevant `.apk` file.
+Go to the [Release](https://github.com/Kevincnzuk/live-ev-bus-akl/releases) page and seek the green `Latest` tag (or the latest `Pre-Release` tag) and download the relevant `.apk` file.
 
 Follow the instructions from your device to install it.
 
@@ -73,11 +70,18 @@ You are ready to go!
 - [Data source currently unavailable.](no_datasets.md)
 - [Hmm, seems like no bus is running.](no_bus_running.md)
 
+### Known issues
+
+- [ ] If the main list is empty (regardless of not initialised or no bus is running), using the map function will cause the app to crash with `java.lang.NullPointerException`.
+- [ ] Go Bus AirportLink Yutong E12 buses have no rego displaying -- This is an AT problem, they did not provide it in the API, and we only display things in the API or from the `datasets` folder of this repository.
+- [ ] If the `Route` is displaying a 5-digit number, it is also an AT problem for returning the old v2 API that has been deprecated for over half a year, while this app is based on the newest v3 API.
+- [ ] `HE0601` is designed to have a dedicated hydrogen label, but is still displaying `Electric` in the list.
+
 ## Open-source Projects Used
 
 This project would not be possible without these open-source projects.
 
-- [AT Data Sources](https://at.govt.nz/about-us/at-data-sources) by _Auckland Transport_ (Public Domain CC `4.0`)
+- [AT Data Sources](https://at.govt.nz/about-us/at-data-sources) by _Auckland Transport_ (Public Domain CC 4.0)
 - [Material Design](https://m3.material.io/) by _Google_
 - [Material Icons](https://github.com/google/material-design-icons) by _Google_
 - [Material Icons Extended](https://github.com/IgniteUI/material-icons-extended) by _Infragistics_
@@ -88,6 +92,12 @@ This project would not be possible without these open-source projects.
 
 ## License
 
-This project is licensed under the `GNU General Public License v3.0`.
+This project is licensed under the `GNU General Public License v3.0`. [![GNU GPL v3.0 logo](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](https://www.gnu.org/graphics/license-logos.html)
 
-Read more at [`LICENSE`](LICENSE).
+Read more at [`LICENSE.md`](LICENSE.md).
+
+## Can I download a copy of the source code and develop one for my city?
+
+Yes, and that is one of the purposes I open-source it. Programming is a tool with unlimited imagination, we should get to use the most from it.
+
+However, do pay attention to the conditions in the GPL-3.0 license, you need to follow them if you use copies of my code.
