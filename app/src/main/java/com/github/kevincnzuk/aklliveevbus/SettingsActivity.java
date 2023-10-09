@@ -19,6 +19,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private MaterialToolbar toolbar;
     private TextInputEditText etPrimaryKey;
+    private TextInputEditText etSecondaryKey;
     private MaterialButton btnKeyWhere;
     private MaterialButton btnAboutApp;
 
@@ -29,6 +30,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.settings_toolbar);
         etPrimaryKey = findViewById(R.id.settings_et_primary_key);
+        etSecondaryKey = findViewById(R.id.settings_et_secondary_key);
         btnKeyWhere = findViewById(R.id.settings_btn_key_where);
         btnAboutApp = findViewById(R.id.settings_btn_about_app);
 
@@ -43,6 +45,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void initComponents() {
         etPrimaryKey.setText(SPHelper.getInstance(this).get(SPHelper.PRIMARY_KEY, ""));
+        etSecondaryKey.setText(SPHelper.getInstance(this).get(SPHelper.SECONDARY_KEY, ""));
 
         btnKeyWhere.setOnClickListener(v -> {
             Intent intent = new Intent();
@@ -67,6 +70,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void save() {
         SPHelper.getInstance(this).save(SPHelper.PRIMARY_KEY, etPrimaryKey.getText().toString());
+        SPHelper.getInstance(this).save(SPHelper.SECONDARY_KEY, etSecondaryKey.getText().toString());
     }
 
     @Override

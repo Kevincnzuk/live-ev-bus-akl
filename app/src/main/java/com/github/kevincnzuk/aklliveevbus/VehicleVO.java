@@ -24,9 +24,9 @@ public class VehicleVO implements Serializable {
         this.id = id;
 
         if (id.equals("24601")) {
-            setEnergy("FCV");
+            setEnergy("fcv");
         } else {
-            setEnergy("EV");
+            setEnergy("ev");
         }
     }
 

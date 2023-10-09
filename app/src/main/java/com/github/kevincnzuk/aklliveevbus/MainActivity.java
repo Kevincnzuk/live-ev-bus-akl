@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -60,13 +61,25 @@ public class MainActivity extends AppCompatActivity {
 
         swipeRefreshLayout.setOnRefreshListener(this::getDataFromPortalOkHttp);
 
-        if (!SPHelper.getInstance(this).get(SPHelper.PRIMARY_KEY, "").equals("")) {
-            getDataFromPortalOkHttp();
-        } else {
+        if (Utils.isConnectedAvailableNetwork(this)) {
+            // If no internet connection, do not pull api, remind user first or JSONException.
+            Snackbar.make(swipeRefreshLayout, "You have no internet connection.", Snackbar.LENGTH_LONG)
+                    .setAction("Open settings", v -> {
+                        ComponentName cm = new ComponentName("com.android.settings","com.android.settings.WirelessSettings");
+                        Intent intent = new Intent("/");
+                        intent.setComponent(cm);
+                        intent.setAction("android.intent.action.VIEW");
+                        startActivity(intent);
+                    }).show();
+        } else if (SPHelper.getInstance(this).get(SPHelper.PRIMARY_KEY, "").equals("")) {
+            // If primary key is empty, do not pull api, remind user first or exception.
             Snackbar.make(swipeRefreshLayout, "You have not set up a key.", Snackbar.LENGTH_LONG)
                     .setAction("Set up", v -> startActivity(
                             new Intent(MainActivity.this, SettingsActivity.class))
                     ).show();
+        } else {
+            // Safe to do so.
+            getDataFromPortalOkHttp();
         }
     }
 
@@ -173,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
             if (list.size() > 0) {
                 LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
                 recyclerView.setLayoutManager(manager);
-                BusAdapter adapter = new BusAdapter(this, list, busVOList);
+                BusAdapter adapter = new BusAdapter(this, list);
                 recyclerView.setAdapter(adapter);
 
                 vehicleVOList = list;

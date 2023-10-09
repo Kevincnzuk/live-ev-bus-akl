@@ -21,7 +21,6 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ViewHolder>{
 
     Context here;
     private List<VehicleVO> vehicleVOList;
-    private List<BusVO> busVOList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         MaterialButton btnLabel;
@@ -42,10 +41,9 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ViewHolder>{
         }
     }
 
-    public BusAdapter(Context context, List<VehicleVO> vehicleVOS, List<BusVO> busVOS) {
+    public BusAdapter(Context context, List<VehicleVO> vehicleVOS) {
         here = context;
         vehicleVOList = vehicleVOS;
-        busVOList = busVOS;
     }
 
     @NonNull
