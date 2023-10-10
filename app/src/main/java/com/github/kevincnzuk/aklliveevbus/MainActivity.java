@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         swipeRefreshLayout.setOnRefreshListener(this::getDataFromPortalOkHttp);
 
-        if (Utils.isConnectedAvailableNetwork(this)) {
+        if (!Utils.isConnectedAvailableNetwork(this)) {
             // If no internet connection, do not pull api, remind user first or JSONException.
             Snackbar.make(swipeRefreshLayout, "You have no internet connection.", Snackbar.LENGTH_LONG)
                     .setAction("Open settings", v -> {

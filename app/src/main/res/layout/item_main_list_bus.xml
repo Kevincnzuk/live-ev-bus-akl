@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/copy"
                 app:icon="@drawable/content_copy_black_24dp"
-                style="@style/Widget.Material3.Button.Icon"/>
+                style="@style/Widget.Material3.Button.TonalButton.Icon"/>
 
             <Space
                 android:layout_width="0dp"
