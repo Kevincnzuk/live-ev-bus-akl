@@ -15,7 +15,7 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 - [x] A list showing all current electric & new energy buses.
 - [x] A map visually presenting all electric & new energy buses operating currently.
 - [x] A neat Material 3 UI & Dark mode adapted.
-- [ ] Detail page showing all about this bus.
+- [x] Detail page showing all about this bus.
 - [ ] _Bus search._
 - [ ] _Photo library for bus (in terms of model and/or fleet no.)_
 - [ ] _Data structure changed from `JSON` to `SQL` (TBA)_
