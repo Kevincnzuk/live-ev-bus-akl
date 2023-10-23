@@ -74,7 +74,7 @@ You are ready to go!
 
 - [ ] If the main list is empty (regardless of not initialised or no bus is running), using the map function will cause the app to crash with `java.lang.NullPointerException`.
 - [ ] Go Bus **AirportLink** Yutong E12 buses have no rego displaying -- This is an AT problem, they did not provide it in the API, and we only display things in the API or from the `datasets` folder of this repository.
-- [x] If the `Route` is displaying a 5-digit number, it is also an AT problem for returning the old v2 API that has been deprecated for over half a year, while this app is based on the newest v3 API.
+- [x] If the `Route` displays a 5-digit number, it is also an AT problem for returning the old v2 API that has been deprecated for over half a year, while this app is based on the newest v3 API.
 - [x] `HE0601` is designed to have a dedicated hydrogen label but still displays `Electric` in the list. - Fixed, the error caused by `"FCV" ≠ "fcv"`.
 
 ## Open-source Projects Used
@@ -100,4 +100,4 @@ Read more at [`LICENSE.md`](LICENSE.md).
 
 Yes, and that is one of the purposes I open-source it. Programming is a tool with unlimited imagination, we should get to use the most from it.
 
-However, do pay attention to the conditions in the GPL-3.0 license, you need to follow them if you use copies of my code.
+However, do pay attention to the conditions in the GPL-3.0 license, you need to follow them as the way this repo is distributed.
