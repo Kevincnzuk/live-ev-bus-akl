@@ -6,7 +6,7 @@ A general guide on future maintenance of this repository and the service it prov
 
 ## Adding new bus
 
-1. Find the `akl_ev.json` file under the folder `datasets`.
+1. Go to the [`akl_ev.json`](https://github.com/Kevincnzuk/live-ev-bus-akl/blob/master/datasets/akl_ev.json) file.
 
 2. First search the bus you want to contribute, in case someone else has already added it. If not, continue to step 3.
 
