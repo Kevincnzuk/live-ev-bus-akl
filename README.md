@@ -62,6 +62,7 @@ You are ready to go!
 
 ## Provide Feedback
 
+- [Add new buses](contribution.md)
 - [New function recommendation](https://github.com/Kevincnzuk/live-ev-bus-akl/discussions/categories/ideas)
 - [Issues with the app](https://github.com/Kevincnzuk/live-ev-bus-akl/issues)
 
