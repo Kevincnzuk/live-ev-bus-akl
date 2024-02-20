@@ -152,5 +152,8 @@
   {"id": "22052","fleet": "RT3009","energy": "ev"},
   {"id": "22053","fleet": "RT3010","energy": "ev"},
   {"id": "22054","fleet": "RT3011","energy": "ev"},
-  {"id": "22055","fleet": "RT3012","energy": "ev"}
+  {"id": "22055","fleet": "RT3012","energy": "ev"},
+  {"id": "44020","fleet": "RT4020","energy": "ev"},
+  {"id": "44021","fleet": "RT4021","energy": "ev"},
+  {"id": "44022","fleet": "RT4022","energy": "ev"}
 ]
