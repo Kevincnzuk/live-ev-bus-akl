@@ -20,6 +20,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.carousel.CarouselLayoutManager;
 import com.google.android.material.textview.MaterialTextView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.osmdroid.api.IMapController;
@@ -31,6 +32,10 @@ import org.osmdroid.views.overlay.Marker;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -106,10 +111,11 @@ public class DetailActivity extends AppCompatActivity {
 
     private void initBusImages() {
         List<String> list = new ArrayList<>();
-        list.add("https://raw.githubusercontent.com/Kevincnzuk/akl-live-ev-bus/main/datasets/images/csr6127glev1/20230615-_DSC0063.jpg");
-        list.add("https://raw.githubusercontent.com/Kevincnzuk/akl-live-ev-bus/main/datasets/images/csr6127glev1/20230615-_DSC0067.jpg");
-        list.add("https://raw.githubusercontent.com/Kevincnzuk/akl-live-ev-bus/main/datasets/images/csr6127glev1/20230615-_DSC0063.jpg");
-        list.add("https://raw.githubusercontent.com/Kevincnzuk/akl-live-ev-bus/main/datasets/images/csr6127glev1/20230615-_DSC0067.jpg");
+        list.add("https://picsum.photos/1200/700?random=1");
+        list.add("https://picsum.photos/1200/700?random=2");
+        list.add("https://picsum.photos/1200/700?random=3");
+        list.add("https://picsum.photos/1200/700?random=4");
+        list.add("https://picsum.photos/1200/700?random=5");
 
         CarouselLayoutManager manager = new CarouselLayoutManager();
         rvBusImages.setLayoutManager(manager);

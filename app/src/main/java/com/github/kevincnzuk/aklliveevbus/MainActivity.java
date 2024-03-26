@@ -87,30 +87,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /* private void initSearch() {
-        LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
-        searchResultRV.setLayoutManager(manager);
-        BusAdapter adapter = new BusAdapter(this, search_buses(searchView.getText().toString()));
-        searchResultRV.setAdapter(adapter);
-    } */
-
-    private List<VehicleVO> search_buses(String keyword) {
-        List<VehicleVO> list = new ArrayList<>();
-
-        for (int i = 0; i < vehicleVOList.size(); i++) {
-            VehicleVO vo = vehicleVOList.get(i);
-            if (vo.getId().contains(keyword)) {
-                list.add(vo);
-            } else if (vo.getLabel().contains(keyword)) {
-                list.add(vo);
-            } else if (vo.getLicensePlate().contains(keyword)) {
-                list.add(vo);
-            }
-        }
-
-        return list;
-    }
-
     private void getDataFromPortalOkHttp() {
         new Thread(() -> {
             StringBuilder fleets = new StringBuilder();

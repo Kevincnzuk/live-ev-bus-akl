@@ -12,6 +12,7 @@ public class VehicleVO implements Serializable {
     private String startTime;
     private String startDate;
     private String routeId;
+    private int directionId;
     private double latitude;
     private double longitude;
     private String fullJson;
@@ -84,6 +85,14 @@ public class VehicleVO implements Serializable {
 
     public void setRouteId(String routeId) {
         this.routeId = routeId;
+    }
+
+    public int getDirectionId() {
+        return directionId;
+    }
+
+    public void setDirectionId(int directionId) {
+        this.directionId = directionId;
     }
 
     public double getLatitude() {

@@ -40,11 +40,27 @@ public class JsonUtils {
         } catch (JSONException e) {
             Log.e(TAG, "checkNameValidityThenReturnDouble: ", e);
         }
-        return 0.0;
+        return defValue;
     }
 
     public static double checkNameValidityThenReturnDouble(JSONObject father, String name) {
         return checkNameValidityThenReturnDouble(father, name, 0.0);
+    }
+
+    public static int checkNameValidityThenReturnInt(JSONObject father, String name, int defValue) {
+        try {
+            if (!father.isNull(name)) {
+                // Value exist
+                return father.getInt(name);
+            }
+        } catch (JSONException e) {
+            Log.e(TAG, "checkNameValidityThenReturnDouble: ", e);
+        }
+        return defValue;
+    }
+
+    public static int checkNameValidityThenReturnInt(JSONObject father, String name) {
+        return checkNameValidityThenReturnInt(father, name, -1);
     }
 
 }

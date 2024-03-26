@@ -15,6 +15,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ViewHolder>{
@@ -70,7 +71,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ViewHolder>{
 
         holder.btnId.setText(extra);
         holder.btnLabel.setText(vo.getLabel());
-        holder.btnRoute.setText(vo.getRouteId());
+        holder.btnRoute.setText(vo.getRouteId() + addRouteDirection(vo.getRouteId(), vo.getDirectionId()));
         holder.btnEnergy.setText(energy);
         holder.btnCopy.setOnClickListener(v -> {
             ClipboardManager manager = (ClipboardManager) here.getSystemService(Context.CLIPBOARD_SERVICE);
@@ -90,5 +91,24 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.ViewHolder>{
     @Override
     public int getItemCount() {
         return vehicleVOList.size();
+    }
+
+    private String addRouteDirection(String route, int direction) {
+        if (route.equals("INN") || route.equals("OUT")) {
+            if (direction == 0) {
+                return " → Clockwise";
+            } else if (direction == 1) {
+                return " → Anticlockwise";
+            }
+        } else if (route.equals("AIR") || route.equals("CTY")) {
+            return " → Loop";
+        } else {
+            if (direction == 0) {
+                return " → Inbound";
+            } else if (direction == 1) {
+                return " → Outbound";
+            }
+        }
+        return "unknown";
     }
 }

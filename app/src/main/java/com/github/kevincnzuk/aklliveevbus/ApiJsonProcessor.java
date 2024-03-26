@@ -35,6 +35,7 @@ public class ApiJsonProcessor {
                     String startTime = JsonUtils.checkNameValidityThenReturnString(trip, "start_time");
                     String startDate = JsonUtils.checkNameValidityThenReturnString(trip, "start_date");
                     String routeId = JsonUtils.checkNameValidityThenReturnString(trip, "route_id");
+                    int directionId = JsonUtils.checkNameValidityThenReturnInt(trip, "direction_id");
                     if (routeId != null && routeId.indexOf("-") > 0) routeId = routeId.substring(0, routeId.indexOf("-"));
 
                     JSONObject vehicle = object.getJSONObject("vehicle");
@@ -56,6 +57,7 @@ public class ApiJsonProcessor {
                     vo.setStartTime(startTime);
                     vo.setStartDate(startDate);
                     vo.setRouteId(routeId);
+                    vo.setDirectionId(directionId);
                     vo.setLatitude(latitude);
                     vo.setLongitude(longitude);
                     vo.setFullJson(entity.getJSONObject(i).toString());
