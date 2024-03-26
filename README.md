@@ -15,8 +15,8 @@ We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/s
 - [x] A list showing all current electric & new energy buses.
 - [x] A map visually presenting all electric & new energy buses operating currently.
 - [x] A neat Material 3 UI & Dark mode adapted.
-- [ ] Detail page showing all about this bus.
-- [ ] _Bus search._
+- [x] Detail page showing all about this bus.
+- [x] Bus search. **NEW IN v0.9.3**
 - [ ] _Photo library for bus (in terms of model and/or fleet no.)_
 - [ ] _Data structure changed from `JSON` to `SQL` (TBA)_
 - [ ] _Connection to AnyTrip (TBA depends on availability)_
@@ -62,6 +62,7 @@ You are ready to go!
 
 ## Provide Feedback
 
+- [Add new buses](contribution.md)
 - [New function recommendation](https://github.com/Kevincnzuk/live-ev-bus-akl/discussions/categories/ideas)
 - [Issues with the app](https://github.com/Kevincnzuk/live-ev-bus-akl/issues)
 
@@ -73,9 +74,9 @@ You are ready to go!
 ### Known issues
 
 - [ ] If the main list is empty (regardless of not initialised or no bus is running), using the map function will cause the app to crash with `java.lang.NullPointerException`.
-- [ ] Go Bus AirportLink Yutong E12 buses have no rego displaying -- This is an AT problem, they did not provide it in the API, and we only display things in the API or from the `datasets` folder of this repository.
-- [ ] If the `Route` is displaying a 5-digit number, it is also an AT problem for returning the old v2 API that has been deprecated for over half a year, while this app is based on the newest v3 API.
-- [ ] `HE0601` is designed to have a dedicated hydrogen label, but is still displaying `Electric` in the list.
+- [ ] Some buses (e.g. Go Bus **AirportLink** Yutong E12) have no rego displaying -- This is an AT problem, they did not provide it in the API, and we only display things in the API or from the `datasets` folder of this repository.
+- [x] If the `Route` displays a 5-digit number, it is also an AT problem for returning the old v2 API that has been deprecated for over half a year, while this app is based on the newest v3 API.
+- [x] `HE0601` is designed to have a dedicated hydrogen label but still displays `Electric` in the list. - Fixed, the error caused by `"FCV" ≠ "fcv"`.
 
 ## Open-source Projects Used
 
@@ -100,4 +101,4 @@ Read more at [`LICENSE.md`](LICENSE.md).
 
 Yes, and that is one of the purposes I open-source it. Programming is a tool with unlimited imagination, we should get to use the most from it.
 
-However, do pay attention to the conditions in the GPL-3.0 license, you need to follow them if you use copies of my code.
+However, do pay attention to the conditions in the GPL-3.0 license, you need to follow them as the way this repo is distributed.
