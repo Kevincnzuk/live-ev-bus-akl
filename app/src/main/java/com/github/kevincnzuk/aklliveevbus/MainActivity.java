@@ -13,10 +13,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.search.SearchBar;
+import com.google.android.material.search.SearchView;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     //private SearchBar searchBar;
+    //private SearchView searchView;
+    //private RecyclerView searchResultRV;
     private MaterialToolbar toolbar;
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView recyclerView;
@@ -51,12 +53,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //searchBar = findViewById(R.id.main_search_bar);
+        // searchBar = findViewById(R.id.main_search_bar);
+        // searchView = findViewById(R.id.main_search_view);
+        // searchResultRV = findViewById(R.id.main_search_rv);
         toolbar = findViewById(R.id.main_toolbar);
         swipeRefreshLayout = findViewById(R.id.main_swipe_refresh_layout);
         recyclerView = findViewById(R.id.main_recycler_view);
 
-        //setSupportActionBar(searchBar);
+        // setSupportActionBar(searchBar);
         setSupportActionBar(toolbar);
 
         swipeRefreshLayout.setOnRefreshListener(this::getDataFromPortalOkHttp);
@@ -81,6 +85,30 @@ public class MainActivity extends AppCompatActivity {
             // Safe to do so.
             getDataFromPortalOkHttp();
         }
+    }
+
+    /* private void initSearch() {
+        LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
+        searchResultRV.setLayoutManager(manager);
+        BusAdapter adapter = new BusAdapter(this, search_buses(searchView.getText().toString()));
+        searchResultRV.setAdapter(adapter);
+    } */
+
+    private List<VehicleVO> search_buses(String keyword) {
+        List<VehicleVO> list = new ArrayList<>();
+
+        for (int i = 0; i < vehicleVOList.size(); i++) {
+            VehicleVO vo = vehicleVOList.get(i);
+            if (vo.getId().contains(keyword)) {
+                list.add(vo);
+            } else if (vo.getLabel().contains(keyword)) {
+                list.add(vo);
+            } else if (vo.getLicensePlate().contains(keyword)) {
+                list.add(vo);
+            }
+        }
+
+        return list;
     }
 
     private void getDataFromPortalOkHttp() {
@@ -183,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
                         }).show();
             }
-            if (list.size() > 0) {
+            if (!list.isEmpty()) {
                 LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
                 recyclerView.setLayoutManager(manager);
                 BusAdapter adapter = new BusAdapter(this, list);
@@ -192,8 +220,11 @@ public class MainActivity extends AppCompatActivity {
                 vehicleVOList = list;
 
                 Snackbar.make(swipeRefreshLayout, "Realtime has been updated.", Snackbar.LENGTH_LONG).show();
-                toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date(Math.round(timestamp * 1000)))));
+                toolbar.setSubtitle(String.format("Last updated: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+                        .format(new Date(Math.round(timestamp * 1000)))));
                 swipeRefreshLayout.setRefreshing(false);
+
+                //initSearch();
             } else {
                 Snackbar make = Snackbar.make(swipeRefreshLayout, "Hmm, seems like no bus is running.", Snackbar.LENGTH_LONG);
                 make.setAction("Why?", v -> {
@@ -222,6 +253,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, SettingsActivity.class));
         } else if (item.getItemId() == R.id.menu_main_map) {
             Intent intent = new Intent(this, MapActivity.class);
+            intent.putExtra("timestamp", timestamp);
+            intent.putExtra("datasets", (Serializable) vehicleVOList);
+            startActivity(intent);
+        } else if (item.getItemId() == R.id.menu_main_search) {
+            Intent intent = new Intent(this, SearchActivity.class);
             intent.putExtra("timestamp", timestamp);
             intent.putExtra("datasets", (Serializable) vehicleVOList);
             startActivity(intent);

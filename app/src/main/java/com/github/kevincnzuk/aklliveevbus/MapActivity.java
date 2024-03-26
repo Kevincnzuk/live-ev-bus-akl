@@ -184,9 +184,7 @@ public class MapActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-        } else if (item.getItemId() == R.id.menu_map_refresh) {
-
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

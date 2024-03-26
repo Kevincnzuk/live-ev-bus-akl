@@ -3,7 +3,7 @@
     <string name="refresh">Refresh</string>
     <string name="map">Map</string>
     <string name="settings">Settings</string>
-    <string name="search">Search…</string>
+    <string name="search">Search</string>
     <string name="development">Function under development.</string>
     <string name="last_updated">Last updated: </string>
 
@@ -32,4 +32,8 @@
     <string name="map_settings">Map Settings</string>
     <string name="map_auto_refresh">Refresh every 5 minutes</string>
     <string name="map_contribution">© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</string>
+
+    <string name="search_hint">Enter keyword</string>
+    <string name="search_helper">Enter ID, Fleet, or Rego to search.</string>
+    <string name="search_404">No match.</string>
 </resources>

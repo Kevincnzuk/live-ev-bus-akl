@@ -82,7 +82,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
+            finish();
         } else if (item.getItemId() == R.id.menu_settings_save) {
             save();
             Snackbar.make(toolbar, "Changes saved!", Snackbar.LENGTH_LONG).show();
