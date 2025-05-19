@@ -31,7 +31,6 @@
   {"id": "32166","fleet": "WB0166","energy": "ev"},
   {"id": "32167","fleet": "WB0167","energy": "ev"},
   {"id": "32168","fleet": "WB0168","energy": "ev"},
-  {"id": "24601","fleet": "HE0601","energy": "fcv"},
   {"id": "24602","fleet": "HE0602","energy": "ev"},
   {"id": "24603","fleet": "HE0603","energy": "ev"},
   {"id": "24604","fleet": "HE0604","energy": "ev"},
@@ -396,5 +395,6 @@
   {"id": "22085","fleet": "RT3012","energy": "ev"},
   {"id": "44020","fleet": "RT4020","energy": "ev"},
   {"id": "44021","fleet": "RT4021","energy": "ev"},
-  {"id": "44022","fleet": "RT4022","energy": "ev"}
+  {"id": "44022","fleet": "RT4022","energy": "ev"},
+  {"id": "44023","fleet": "RT4023","energy": "fcv"}
 ]
