@@ -42,8 +42,6 @@
   {"id": "24867","fleet": "HE3867","energy": "ev"},
   {"id": "24868","fleet": "HE3868","energy": "ev"},
   {"id": "24869","fleet": "HE3869","energy": "ev"},
-  {"id": "23006","fleet": "PC5601","energy": "ev"},
-  {"id": "23007","fleet": "PC5602","energy": "ev"},
   {"id": "15400","fleet": "NB5400","energy": "ev"},
   {"id": "15401","fleet": "NB5401","energy": "ev"},
   {"id": "15752","fleet": "NB5752","energy": "ev"},
@@ -401,5 +399,8 @@
   {"id": "44020","fleet": "RT4020","energy": "ev"},
   {"id": "44021","fleet": "RT4021","energy": "ev"},
   {"id": "44022","fleet": "RT4022","energy": "ev"},
-  {"id": "44023","fleet": "RT4023","energy": "fcv"}
+  {"id": "44023","fleet": "RT4023","energy": "fcv"},
+  {"id": "45601","fleet": "RT5601","energy": "ev"},
+  {"id": "45602","fleet": "RT5602","energy": "ev"},
+  {"id": "43124","fleet": "RT3124","energy": "ev"}
 ]
