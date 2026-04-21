@@ -1,5 +1,11 @@
 # AKL Live EV Bus
 
+> **Notice:**
+>
+> I have shifted work focus to a new project that will provide more functionalities than this project has to offer.
+>
+> This project will likely to stop being supported after the new project is deployed. 
+
 This is the official distribution page for the `AKL Live EV Bus` app. Please take a look at the information below on how to use it.
 
 We support Auckland Transport's [Mission Electric](https://at.govt.nz/about-us/sustainability/mission-electric/).
